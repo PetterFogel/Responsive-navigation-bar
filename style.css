@@ -15,11 +15,16 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 10vh;
-    background: #222;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.5s;
 }
 
 .logo {
-    color: #f1f1f1;
+    color: #222;
     text-transform: uppercase;
     font-size: 1.2rem;
 }
@@ -33,7 +38,14 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #f1f1f1;
+    color: #222;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #f1f1f1;
+    color: #222;
 }
 
 .burger-menu {
@@ -44,7 +56,7 @@ nav {
 .burger-menu div {
     width: 1.5rem;
     height: 3px;
-    background: #f1f1f1;
+    background: #222;
     margin: 0.3rem;
     transition: all 0.3s ease;
 }
@@ -73,6 +85,15 @@ nav {
     }
 }
 
+.header-active {
+    background: #222;
+    transition: all 0.5s;
+}
+
+.color-active {
+    color: #f1f1f1;
+}
+
 .nav-active {
     transform: translateX(0%);
 }
@@ -89,3 +110,4 @@ nav {
     transform:  rotate(45deg) translate(-0.3rem, -0.4rem);
 
 }
+
