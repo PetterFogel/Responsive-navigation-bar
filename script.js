@@ -15,7 +15,6 @@ function burgerIconNav() {
 burgerIconNav();
 
 // Navigation Scroll Effect
-
 const nav = document.querySelector("nav");
 const logo = document.querySelector(".logo");
 const allNavLinks = document.querySelectorAll(".nav-links li a");
@@ -26,10 +25,14 @@ window.onscroll = function() {
     if (top >= 50) {
         nav.classList.add("header-active");
         logo.classList.add("color-active");
-        allNavLinks.classList.add("color-active");
+        for (const link of allNavLinks) {
+            link.classList.add("color-active");
+        }
     } else {
         nav.classList.remove("header-active");
         logo.classList.remove("color-active");
-        allNavLinks.classList.remove("color-active");
+        for (const link of allNavLinks) {
+            link.classList.remove("color-active");
+        }
     }
 }

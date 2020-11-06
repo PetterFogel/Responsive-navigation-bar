@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* Home */
+
 header {
     height: 100vh;
     width: 100%;
@@ -24,7 +26,6 @@ nav {
 }
 
 .logo {
-    color: #222;
     text-transform: uppercase;
     font-size: 1.2rem;
 }
@@ -38,13 +39,13 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #222;
     padding: 0.5rem 1rem;
+    color: #000;
     transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-    background: #f1f1f1;
+    background: #fff;
     color: #222;
 }
 
@@ -61,6 +62,7 @@ nav {
     transition: all 0.3s ease;
 }
 
+/* About */
 @media (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -100,9 +102,10 @@ nav {
 .header-active {
     background: #222;
     transition: all 0.5s;
+    color: #f1f1f1;
 }
 
-.color-active {
+a.color-active  {
     color: #f1f1f1;
 }
 
