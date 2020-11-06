@@ -56,7 +56,7 @@ nav {
 .burger-menu div {
     width: 1.5rem;
     height: 3px;
-    background: #222;
+    background: #f1f1f1;
     margin: 0.3rem;
     transition: all 0.3s ease;
 }
@@ -64,6 +64,10 @@ nav {
 @media (max-width: 768px) {
     body {
         overflow-x: hidden;
+    }
+
+    nav {
+        background: #222;
     }
 
     .nav-links {
@@ -78,6 +82,14 @@ nav {
         width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+    }
+
+    .nav-links a {
+        color: #f1f1f1;
+    }
+
+    .logo {
+        color: #f1f1f1;
     }
 
     .burger-menu {
