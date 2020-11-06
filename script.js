@@ -1,14 +1,35 @@
+// Burger Menu
 function burgerIconNav() {
     // Fetch classes from HTML.
     const burgerIcon = document.querySelector(".burger-menu");
-    const navLinks = document.querySelector(".nav-links");
+    const navBar = document.querySelector(".nav-links");
     // Click burger-icon to start function.
     burgerIcon.addEventListener("click", function() {
         // Navigation Appear.
-        navLinks.classList.toggle("nav-active");
+        navBar.classList.toggle("nav-active");
         // Burger bars rotate.
         burgerIcon.classList.toggle("rotate");
     });
 }
 
 burgerIconNav();
+
+// Navigation Scroll Effect
+
+const nav = document.querySelector("nav");
+const logo = document.querySelector(".logo");
+const allNavLinks = document.querySelectorAll(".nav-links li a");
+// 
+window.onscroll = function() {
+    var top = window.scrollY;
+    console.log(top);
+    if (top >= 50) {
+        nav.classList.add("header-active");
+        logo.classList.add("color-active");
+        allNavLinks.classList.add("color-active");
+    } else {
+        nav.classList.remove("header-active");
+        logo.classList.remove("color-active");
+        allNavLinks.classList.remove("color-active");
+    }
+}
